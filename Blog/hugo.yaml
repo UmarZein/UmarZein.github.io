@@ -1,0 +1,20 @@
+baseURL: https://umarze.in/
+languageCode: en-us
+title: "umarzein"
+theme: PaperMod
+outputs:
+home:
+  - HTML
+  - RSS
+  - JSON
+enableRobotsTXT: true
+enableEmoji: true
+params:
+  math: true 
+  disableSpecial1stPost: true
+  disableScrollToTop: true
+menu:
+  main:
+    - name: Search
+      url: search/
+      weight: 10
