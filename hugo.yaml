@@ -3,16 +3,23 @@ languageCode: en-us
 title: "umarzein"
 theme: PaperMod
 outputs:
-home:
-  - HTML
-  - RSS
-  - JSON
+  home:
+    - HTML
+    - RSS
+    - JSON
 enableRobotsTXT: true
 enableEmoji: true
 params:
+  meta:
+    favicon: false
   math: true 
   disableSpecial1stPost: true
   disableScrollToTop: true
+  assets:
+    favicon: "/assets/favicon.ico" 
+    favicon16x16: "/assets/favicon-16x16.png"
+    favicon32x32: "/assets/favicon-32x32.png"
+    apple_touch_icon: "/assets/apple-touch-icon.png"
 menu:
   main:
     - name: Search

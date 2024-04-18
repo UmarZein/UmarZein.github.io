@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Audience Programming | umarzein</title>
+<meta name="keywords" content="">
+<meta name="description" content="Let the audience do the job">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/fun/audience_programming/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/assets/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/assets/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/assets/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/fun/audience_programming/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css" integrity="sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js" integrity="sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+
+
+
+
+
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="umarzein (Alt + H)">umarzein</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Audience Programming
+    </h1>
+    <div class="post-description">
+      Let the audience do the job
+    </div>
+    <div class="post-meta"><span title='2024-04-14 05:32:16 +0700 WIB'>April 14, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>The idea was fully inspired by <strong><a href="https://www.youtube.com/@ThePrimeagen">ThePrimeagen</a>&rsquo;s</strong> <a href="https://www.youtube.com/watch?v=W3zhFtSXXG0"><strong>2300 Devs vs 1 Dev</strong></a> VOD in which his twitch&rsquo;s chat competed against him in a coding race wherein they had to sum an array <code>value</code> whilst he had to code binary search and hello world in expressjs. The twist is that chat&rsquo;s messages had to be somehow combined and piped into <em>his</em> editor.</p>
+<p>With half of his twitch chat having more than 3 seconds of video delay and a quarter with more than 5 &mdash; which means they didn&rsquo;t get to play &mdash; it took around 8 minutes for chat to write <code>values.reduce((x,a)=&gt;x+a)</code>.</p>
+<p>Now, of course, chat&rsquo;s speed is bound by their stupidity, but I see an opportunity for this to become a fair(er) game.</p>
+<h1 id="the-voice-of-the-hivemind">The Voice of the Hivemind<a hidden class="anchor" aria-hidden="true" href="#the-voice-of-the-hivemind">#</a></h1>
+<p>The aggregation method used to select an action was to elect the most frequent 1-character message (or <code>&lt;backspace&gt;</code> and other special characters) in chat over a 5-second period (which we call a round). While it&rsquo;s certainly intuitive and functional, we can think of a better way.</p>
+<hr>
+<p>Throughout this article, different approach will be applied to the following sample of messages to illustrate its effect.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">chatter#23</span>: <span style="color:#e6db74">&#34;const sum = arr&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">chatter#27</span>: <span style="color:#e6db74">&#34;const sum = arr.re&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">chatter#67</span>: <span style="color:#e6db74">&#34;const tot = arr.reduce&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">chatter#68</span>: <span style="color:#e6db74">&#34;const x = 0&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">chatter#69</span>: <span style="color:#e6db74">&#34;const sum = &#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">chatter#61</span>: <span style="color:#e6db74">&#34;const total&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">chatter#65</span>: <span style="color:#e6db74">&#34;let sum = 0; arr.forEach(n =&gt; sum += n);&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">chatter#34</span>: <span style="color:#e6db74">&#34;let tot =&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">chatter#38</span>: <span style="color:#e6db74">&#34;lol&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">chatter#31</span>: <span style="color:#e6db74">&#34;let sum = 0; for(let i = 0&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">chatter#22</span>: <span style="color:#e6db74">&#34;const sum = arr.reduce((n, {Amount})&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">chatter#98</span>: <span style="color:#e6db74">&#34;lol&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">chatter#21</span>: <span style="color:#e6db74">&#34;const x = arr.reduce&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">chatter#33</span>: <span style="color:#e6db74">&#34;arr arr arr arr arr&#34;</span>
+</span></span></code></pre></div><p>It will also be tested against a bigger dataset accross a spectrum of entropy, on the low end of which would be a dataset with low number of unique messages w.r.t. the number of messages and the opposite on the other end</p>
+<h2 id="beyond-one-character">Beyond one character<a hidden class="anchor" aria-hidden="true" href="#beyond-one-character">#</a></h2>
+<p>Looking at the example above, it&rsquo;s reasonable to say that a few of the possible aggregation results would be <code>const sum =</code> or <code>let sum = 0</code> or just <code>const</code>. But it&rsquo;s not as simple as &ldquo;the most common x&rdquo; since it shouldn&rsquo;t be <code>lol</code>, even though it&rsquo;s the most common <em>whole</em> message, and it <em>definitely</em> shouldn&rsquo;t be <code> </code> (space), the most common substring. The most common word? That would be <code>arr</code>. There&rsquo;s more factor in the game</p>
+<p>As guidelines, the aggregated message should:</p>
+<ul>
+<li>
+<p>be commonly found in the beginnings of messages</p>
+</li>
+<li>
+<p>not lean towards very short messages</p>
+</li>
+</ul>
+<h2 id="the-proportional-falloff-algorithm">The Proportional Falloff Algorithm<a hidden class="anchor" aria-hidden="true" href="#the-proportional-falloff-algorithm">#</a></h2>
+<blockquote>
+<p><strong>TODO</strong> this is not exactly how it works: it needs to be reworded</p>
+</blockquote>
+<p>This algorithm needs two real-number parameters $T_a,T_b \in [0,1]$. It starts off by identifying the most common first letter (in our case, <code>c</code>) and appending it into the result buffer. Then, it goes into a loop:</p>
+<ol>
+<li>
+<p>Filter only messages that start with the result buffer (in our first iteration, that would be 8 messages coming from chatter # 23, 27, 67, etc.)</p>
+</li>
+<li>
+<p>Find the most common next letter (in our first iteration, the <code>o</code> in <code>const</code> among those 8 messages)</p>
+</li>
+<li>
+<p>Calculate the proportion $P_a$ of the number of messages that continue with the next letter w.r.t. the number of messages that start with the result buffer (100% in our first iteration since all of the messages that start with <code>c</code> also starts with <code>co</code>)</p>
+</li>
+<li>
+<p>Calculate the proportion $P_b$ of the number of messages that start with only the result buffer w.r.t. the number of total messages (57% in our case)</p>
+</li>
+<li>
+<p>If the proportion $P_a$ is less than or equal to a threshold $T_a$ which we decide, return the result buffer</p>
+</li>
+<li>
+<p>If the proportion $P_b$ is less than or equal to a threshold $T_b$ which we decide, return the result buffer</p>
+</li>
+<li>
+<p>Append the next letter to the result buffer</p>
+</li>
+<li>
+<p>Repeat the cycle</p>
+</li>
+</ol>
+<blockquote>
+<p>The lower $T_a$, the more permissive the algorithm will be in accepting longer and biased messages. $T_b$ is used to mitigate an issue where the algorithm slides into a hyper-specific result when all the falloffs are smooth</p>
+</blockquote>
+<p>Applying the algorithm with our example, here some results:</p>
+<ul>
+<li>
+<p>Having $T_a \gt 0.5$ results in <code>const </code>, unless $T_b \gt 0.5$ in which case it will only output <code>c</code></p>
+</li>
+<li>
+<p>When $T_a \le 0.5$, $T_b=0$ yields the entirity of chatter#22&rsquo;s message, <code>const sum = arr.reduce((n, {Amount})</code>. $T_b=0.1$ yields <code>const sum = arr.re</code>. $T_b=0.2$ yields <code>const sum = arr</code>. $T_b \in\{0.3, 0.4, 0.5\}$ yields <code>const </code></p>
+</li>
+</ul>
+<p>Even though it depends in one&rsquo;s case, I recommend $0.3 \lt T_a \le 0.5$ and $0.1 \le T_b \le 0.5$</p>
+<hr>
+<p>Since we have only introduced 1 algorithm, it is not yet appropriate to benchmark it. Instead, we will compare it with other algorithms later on</p>
+<h2 id="formula-based-approach">Formula based approach<a hidden class="anchor" aria-hidden="true" href="#formula-based-approach">#</a></h2>
+<p>Since the aim is to capture subprefixes which are as long and common as possible, we can remodel this as a mathematical optimization problem. If $P$ is the subprefix, $L$ is the subprefix length, and $N$ is the subprefix frequency, this problem then becomes</p>
+<p>$$
+\mathrm{max}_P [LN]
+$$</p>
+<blockquote>
+<p>basically, this is saying, we are to change $P$ such that $LN$ is maximized</p>
+</blockquote>
+<p>Here is an example score function, $LN$, which we will try to maximize w.r.t. $P$, the subprefix. With this formula, if the prefix length$L$ doubles,  so does the score. However, that will usually reduce its occurrence/frequency $N$ and thus also affecting the score. Moreover, this function is naive
+and might contain subtle pitfalls such as equally honoring $L$ and $N$. We will try different variations such as $L(N-1), LN^2, LN(N-1), \dots$</p>
+<hr>
+<p>Unfortunately, with the example, not a lot can be said about their differences because they all returned <code>const </code> except when $L$ has a higher power than $N$ like in $L^2N$ or $L^3N^2$ which will return chatter#22&rsquo;s full message</p>
+<h2 id="trie-optimization">Trie Optimization<a hidden class="anchor" aria-hidden="true" href="#trie-optimization">#</a></h2>
+<p>Since we are searching for prefixes, the trie data structure may prove to be effecient in some cases. The trie that can be implemented in this case is visualized as follows:</p>
+<p><img loading="lazy" src="/assets/trie_dark.avif" alt="image"  />
+</p>
+<blockquote>
+<p><strong>TODO</strong> Continue this</p>
+</blockquote>
+<blockquote>
+<p><strong>TODO</strong> Tf-Idf but opposite? Df-Itf?</p>
+</blockquote>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="http://localhost:1313/">umarzein</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
